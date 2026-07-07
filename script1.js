@@ -33,6 +33,7 @@ function loadTasks() {
     return [];
   }
 }
+//Fixing the Drag and drop functionality in the code 
 
 /** @param {Task[]} tasks */
 function saveTasks(tasks) {
