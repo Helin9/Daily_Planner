@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daybook — a simple daily planner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">●</span>
+        <span class="brand-name">Daybook</span>
+      </div>
+
+      <div class="date-display">
+        <span class="date-label">Today</span>
+        <span class="date-value" id="dateValue">—</span>
+      </div>
+
+      <div class="focus-block">
+        <label for="focusInput" class="focus-label">Today's focus</label>
+        <input type="text" id="focusInput" placeholder="One thing that matters most today" maxlength="60" />
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-num" id="statTotal">0</span>
+          <span class="stat-label">tasks</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" id="statDone">0</span>
+          <span class="stat-label">done</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" id="statPercent">0%</span>
+          <span class="stat-label">complete</span>
+        </div>
+      </div>
+
+      <div class="legend">
+        <span class="legend-title">Categories</span>
+        <div class="legend-item"><span class="dot dot-work"></span>Work</div>
+        <div class="legend-item"><span class="dot dot-personal"></span>Personal</div>
+        <div class="legend-item"><span class="dot dot-health"></span>Health</div>
+      </div>
+
+      <button class="clear-btn" id="clearDoneBtn">Clear completed</button>
+    </aside>
+
+    <!-- Main timeline -->
+    <main class="timeline-wrap">
+      <header class="timeline-header">
+        <h1>Plan your day</h1>
+        <form id="taskForm" class="task-form">
+          <input type="text" id="taskTitle" placeholder="Task name" required maxlength="60" />
+          <select id="taskTime" required></select>
+          <select id="taskCategory">
+            <option value="work">Work</option>
+            <option value="personal">Personal</option>
+            <option value="health">Health</option>
+          </select>
+          <button type="submit">Add</button>
+        </form>
+      </header>
+
+      <div class="timeline" id="timeline">
+        <!-- hour rows injected by JS -->
+      </div>
+    </main>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
