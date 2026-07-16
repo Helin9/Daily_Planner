@@ -1,7 +1,7 @@
 /**
  * Daybook — a small local-first daily planner.
  * All state is persisted to localStorage so the plan survives a page reload.
- * No frameworks, no build step — just DOM + localStorage.
+ * No frameworks, no build step — just DOM + localStorage. This is an example of Github workflow
  */
 // this is an example of a comment 
 const STORAGE_KEY = 'daybook-tasks';
@@ -33,6 +33,7 @@ function loadTasks() {
     return [];
   }
 }
+//Fixing the Drag and drop functionality in the code 
 
 /** @param {Task[]} tasks */
 function saveTasks(tasks) {
