@@ -3,7 +3,7 @@
  * All state is persisted to localStorage so the plan survives a page reload.
  * No frameworks, no build step — just DOM + localStorage. This is an example of Github workflow
  */
-
+// this is an example of a comment 
 const STORAGE_KEY = 'daybook-tasks';
 const FOCUS_KEY = 'daybook-focus';
 const START_HOUR = 6;   // 6 AM
